@@ -83,6 +83,39 @@ document.querySelector("#btnSubmit").addEventListener("click",(e) => {
 
 })
 
+document.querySelector("#btnAuthenticate").addEventListener("click",(e) => {
+    strAuthentication = document.querySelector("#txtAuthentication").value()
+
+    let blnError = false
+    let strMessage = ''
+
+
+    if(strAuthentication.length < 1){
+        blnError = true
+    }
+
+
+    if(blnError){
+
+        strMessage += "Please fill out all required parts of the form!"
+
+        Swal.fire({
+            title: "Whoops!",
+            html: strMessage,
+            icon: "error"
+        });
+    }
+
+    if(!blnError){
+        Swal.fire({
+            title: "Success!",
+            text: "success!",
+            icon: "success"
+        });
+    }
+
+})
+
 $('#btnSwapToRegister').on('click',function(){
     $('#frmLogin').slideUp('fast')
     $('#frmRegister').slideDown('slow')
@@ -91,4 +124,9 @@ $('#btnSwapToRegister').on('click',function(){
 $('#btnSwapToLogin').on('click',function(){
     $('#frmRegister').slideUp('fast')
     $('#frmLogin').slideDown('slow')
+})
+
+$('#btnLogin').on('click',function(){
+    $('#frmLogin').slideUp('fast')
+    $('#frmAuthentication').slideDown('slow')
 })
