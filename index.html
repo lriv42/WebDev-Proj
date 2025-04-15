@@ -5,52 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Peer Evaluation Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/pulse/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css" rel="stylesheet">
 </head>
 <body class="bg-dark">
     <div class="d-flex justify-content-center align-items-center vh-100">
-        <form class="card col-12 col-md-5 col-lg-4" id="frmLogin">
+        <form class="card w-full max-w-sm shadow-lg bg-base-100" id="frmLogin">
             <div class="card-body">
-                <h2 class="text-center mb-0 text-primary">Login</h2>
-                <input id="txtLoginUser" class="form-control" type="email" placeholder="johndoe@email.com" aria-label="Input for Email">
-                <input id="txtLoginPass" class="form-control mt-2" type="password" placeholder="password" aria-label="Input for Password">
-                <button class="btn btn-primary col-12 mt-2" type="button" id="btnLogin">Log In</button>
-                <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapToRegister">Need an account, register here</button>
-
+              <h1 class="text-center text-4xl font-bold text-gray-500">Login</h1>
+              <input id="txtLoginUser" class="input input-bordered w-full mt-4 text-white" type="email" placeholder="johndoe@email.com">
+              <input id="txtLoginPass" class="input input-bordered w-full mt-4 text-white" type="password" placeholder="password">
+              <button class="btn btn-primary w-full mt-4" type="button" id="btnLogin">Log In</button>
+              <button class="btn btn-link w-full mt-2" type="button" id="btnSwapToRegister">Need an account? Register here</button>
             </div>
-        </form>
-        <form class="card col-12 col-md-5 col-lg-4" id="frmAuthentication" style="display:none;">
+          </form>
+          <form class="card w-full max-w-sm shadow-lg bg-base-100" id="frmAuthentication" style="display:none;">
             <div class="card-body">
-                <h1 class="text-center mb-0 text-primary">Two-Factor Authentication</h1>
-                <h2 class="text-center mb-0 text-primary">Check your authentication app for your code</h2>
-                <input id="txtAuthentication" class="form-control mt-2" type="authentication" placeholder="Two-Factor Code" aria-label="Input for Two-Factor Authentication Page">
-                <button class="btn btn-primary col-12 mt-2" type="button" id="btnAuthenticate">Authenticate</button>
+              <h1 class="text-center text-2xl font-bold text-primary">Two-Factor Authentication</h1>
+              <p class="text-center text-sm text-gray-500 mt-2">
+                Check your authentication app for your code
+              </p>
+              <input id="txtAuthentication" class="input input-bordered w-full mt-4 text-white" type="text" placeholder="Two-Factor Code" aria-label="Input for Two-Factor Authentication Page">
+              <button class="btn btn-primary w-full mt-4" type="button" id="btnAuthenticate">Authenticate</button>
             </div>
-        </form>
-        <form class="card col-12 col-md-5 col-lg-4" id="frmRegister" style="display:none;">
+          </form>
+        <form class="card w-full max-w-sm shadow-lg bg-base-100" id="frmRegister" style="display:none;">
             <div class="card-body">
-                <h1 class="text-center mb-0 text-primary">Register</h1>
-                <input id="txtUsername" class="form-control mt-4" type="email" placeholder="*johndoe@email.com" aria-label="input for email">
-                <input id="txtPassword" class="form-control mt-1" type="password" placeholder="*Password" aria-label="input for password">
-                <input id="txtFirstName" class="form-control mt-3" type="text" placeholder="*First Name" aria-label="input for first name">
-                <input id="txtLastName" class="form-control mt-1" type="text" placeholder="*Last Name" aria-label="input for last name">
-                <input id="txtTeamNumber" class="form-control mt-3" type="text" placeholder="Input your team number" aria-label="input for team number">
-                <button class="btn btn-primary col-12 mt-3" type="button" id="btnSubmit">Submit</button>
-                <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapToLogin">Login To An Account Here</button>
+              <h1 class="text-center text-2xl font-bold text-primary">Register</h1>
+              <input id="txtUsername" class="input input-bordered w-full mt-4 text-white" type="email" placeholder="johndoe@email.com">
+              <input id="txtPassword" class="input input-bordered w-full mt-4 text-white" type="password" placeholder="Password">
+              <input id="txtFirstName" class="input input-bordered w-full mt-4 text-white" type="text" placeholder="First Name">
+              <input id="txtLastName" class="input input-bordered w-full mt-4 text-white" type="text" placeholder="Last Name">
+              <input id="txtTeamNumber" class="input input-bordered w-full mt-4 text-white" type="text" placeholder="Input your team number">
+              <button class="btn btn-primary w-full mt-4" type="button" id="btnSubmit">Submit</button>
+              <button class="btn btn-link w-full mt-2" type="button" id="btnSwapToLogin">Login To An Account Here</button>
             </div>
-        </form>
+          </form>
             
-        <form class="card col-12 col-md-5 col-lg-4" id="frmFeedback" style="display:none;">
+          <form class="card w-full max-w-sm shadow-lg bg-base-100" id="frmFeedback" style="display:none;">
             <div class="card-body">
-                <h1 class="text-center mb-0 text-primary">Feedback</h1>
-                <h2 class="text-center mb-0 text-primary">Please provide your feedback</h2>
-                <input id="txtMemberName" class="form-control mt-4" type="text" placeholder="*Member Name" aria-label="input for member name">
-                <textarea id="txtFeedback" class="form-control mt-4" type="text" placeholder="Input your feedback" aria-label="input for feedback">
-                
-                <button class="btn btn-primary col-12 mt-3" type="button" id="btnSubmitFeedback">Submit</button>
-                <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapToLogin">Login To An Account Here</button>
+              <h1 class="text-center text-2xl font-bold text-primary">Feedback</h1>
+              <p class="text-center text-sm text-white mt-2">
+                Please provide your feedback below
+              </p>
+              <input id="txtFeedbackName" class="input input-bordered w-full mt-4 text-white" type="text" placeholder="Name" aria-label="Input for name">
+              <textarea id="txtFeedback" class="textarea textarea-bordered w-full mt-4 text-white" placeholder="Input your feedback for the member" aria-label="Input for feedback"></textarea>
+              <button class="btn btn-primary w-full mt-4" type="button" id="btnSubmitFeedback">Submit</button>
+              <button class="btn btn-link w-full mt-2" type="button" id="btnLogout">Logout</button>
             </div>
-            
-        </form>
+          </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
