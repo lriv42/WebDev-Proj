@@ -2,18 +2,18 @@
 
 document.querySelector("#btnLogin").addEventListener("click",(e) => {
     const regEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
-    let strUsername = document.querySelector("#txtUsername").value
-    const strPassword = $('#txtPassword').val()
-    strUsername = strUsername.toLowerCase()
+    let strLoginUser = document.querySelector("#txtLoginUser").value
+    const strLoginPass = $('#txtLoginPass').val()
+    strLoginUser = strLoginUser.toLowerCase()
     let blnError = false
     let strMessage = ''
 
-    if(strPassword.length < 1){
+    if(strLoginPass.length < 1){
         blnError = true
         strMessage += '<p class="mb-0 mt-0">Password Cannot Be Blank</p>'
     }
 
-    if(!regEmail.test(strUsername)){
+    if(!regEmail.test(strLoginUser)){
         blnError = true
         strMessage += '<p  class="mb-0 mt-0">Username must be an email address</p>'
     }
@@ -129,4 +129,9 @@ $('#btnSwapToLogin').on('click',function(){
 $('#btnLogin').on('click',function(){
     $('#frmLogin').slideUp('fast')
     $('#frmAuthentication').slideDown('slow')
+})
+
+$('#btnAuthenticate').on('click',function(){
+    $('#frmAuthentication').slideUp('fast')
+    $('#frmFeedback').slideDown('slow')
 })

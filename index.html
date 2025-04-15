@@ -11,8 +11,8 @@
         <form class="card col-12 col-md-5 col-lg-4" id="frmLogin">
             <div class="card-body">
                 <h2 class="text-center mb-0 text-primary">Login</h2>
-                <input id="txtUsername" class="form-control" type="email" placeholder="johndoe@email.com" aria-label="Input for Email">
-                <input id="txtPassword" class="form-control mt-2" type="password" placeholder="password" aria-label="Input for Password">
+                <input id="txtLoginUser" class="form-control" type="email" placeholder="johndoe@email.com" aria-label="Input for Email">
+                <input id="txtLoginPass" class="form-control mt-2" type="password" placeholder="password" aria-label="Input for Password">
                 <button class="btn btn-primary col-12 mt-2" type="button" id="btnLogin">Log In</button>
                 <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapToRegister">Need an account, register here</button>
 
@@ -33,9 +33,23 @@
                 <input id="txtPassword" class="form-control mt-1" type="password" placeholder="*Password" aria-label="input for password">
                 <input id="txtFirstName" class="form-control mt-3" type="text" placeholder="*First Name" aria-label="input for first name">
                 <input id="txtLastName" class="form-control mt-1" type="text" placeholder="*Last Name" aria-label="input for last name">
+                <input id="txtTeamNumber" class="form-control mt-3" type="text" placeholder="Input your team number" aria-label="input for team number">
                 <button class="btn btn-primary col-12 mt-3" type="button" id="btnSubmit">Submit</button>
                 <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapToLogin">Login To An Account Here</button>
             </div>
+        </form>
+            
+        <form class="card col-12 col-md-5 col-lg-4" id="frmFeedback" style="display:none;">
+            <div class="card-body">
+                <h1 class="text-center mb-0 text-primary">Feedback</h1>
+                <h2 class="text-center mb-0 text-primary">Please provide your feedback</h2>
+                <input id="txtMemberName" class="form-control mt-4" type="text" placeholder="*Member Name" aria-label="input for member name">
+                <textarea id="txtFeedback" class="form-control mt-4" type="text" placeholder="Input your feedback" aria-label="input for feedback">
+                
+                <button class="btn btn-primary col-12 mt-3" type="button" id="btnSubmitFeedback">Submit</button>
+                <button class="btn btn-link col-12 mt-0" type="button" id="btnSwapToLogin">Login To An Account Here</button>
+            </div>
+            
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
